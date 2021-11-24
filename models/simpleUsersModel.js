@@ -5,9 +5,12 @@ const simpleUsersSchema = mongoose.Schema(
     firstName: String,
     lastName: String,
   },
-  { versionKey: false }
+  {
+    versionKey: false,
+    collection: "simpleUsers",
+  }
 );
 
-const SimpleUsersModel = mongoose.model("simpleuser", simpleUsersSchema);
+const SimpleUsersModel = mongoose.model("simpleUser", simpleUsersSchema, "simpleUsers");
 
 export default SimpleUsersModel;
