@@ -1,13 +1,14 @@
+import express from "express";
+import * as SimpleUsersController from "./controllers/simpleUsersController.js";
 import mongoose from "mongoose";
 
-const simpleUsersSchema = mongoose.Schema(
-  {
-    firstName: String,
-    lastName: String,
-  },
-  { versionKey: false }
-);
+mongoose.connect("mongodb://localhost:27017/test");
 
-const SimpleUsersModel = mongoose.model("simpleuser", simpleUsersSchema);
+const app = express();
+const port = 3033;
 
-export default SimpleUsersModel;
+app.use(express.json());
+
+app.listen(port, () => {
+  console.log(`API is now listening on port http://localhost:${port}`);
+});
