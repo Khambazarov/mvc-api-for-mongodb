@@ -1,0 +1,13 @@
+{
+  "name": "mvc-api-for-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon src/app.js"
+  },
+  "type":"module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

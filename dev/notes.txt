@@ -1,0 +1,2 @@
+mongoimport --db test --collection simpleusers --type json --file simpleusers.json --jsonArray
+
